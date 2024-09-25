@@ -7,9 +7,10 @@
 
 import Foundation
 
-public struct LoginResponseDTO: Codable {
-    public let error: Bool
-    public var reason: String? = nil
+public struct LoginResponseDTO: APIErrorResponse, Codable {
+
+    public var error: Bool
+    public var reason: String?
     public var token: String? = nil
     public var userId: UUID? = nil
 

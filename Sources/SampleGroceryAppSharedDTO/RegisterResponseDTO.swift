@@ -7,9 +7,10 @@
 
 import Foundation
 
-public struct RegisterResponseDTO: Codable {
-    public let error: Bool
-    public var reason: String? = nil
+public struct RegisterResponseDTO: APIErrorResponse, Codable {
+
+    public var error: Bool
+    public var reason: String?
 
     public init(error: Bool, reason: String? = nil) {
         self.error = error
