@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LoginResponseDTO: APIErrorResponse, Codable {
+public struct LoginResponseDTO: Codable {
 
     public var error: Bool
     public var reason: String?
