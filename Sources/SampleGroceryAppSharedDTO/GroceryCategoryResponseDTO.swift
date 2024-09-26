@@ -11,10 +11,14 @@ public struct GroceryCategoryResponseDTO: Codable {
     public let id: UUID
     public let title: String
     public let colorCode: String
+    public var error: Bool
+    public var reason: String?
 
-    public init(id: UUID, title: String, colorCode: String) {
+    public init(id: UUID, title: String, colorCode: String, error: Bool, reason: String? = nil) {
         self.id = id
         self.title = title
         self.colorCode = colorCode
+        self.error = error
+        self.reason = reason
     }
 }
