@@ -10,11 +10,11 @@ import Foundation
 public struct GroceryItemRequestDTO: Codable {
     public let title: String
     public let price: Double
-    public let quanity: Int
+    public let quantity: Int
 
-    public init(title: String, price: Double, quanity: Int) {
+    public init(title: String, price: Double, quantity: Int) {
         self.title = title
         self.price = price
-        self.quanity = quanity
+        self.quantity = quantity
     }
 }
