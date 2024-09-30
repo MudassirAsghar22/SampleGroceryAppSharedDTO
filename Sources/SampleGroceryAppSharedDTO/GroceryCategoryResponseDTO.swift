@@ -13,12 +13,14 @@ public struct GroceryCategoryResponseDTO: Codable {
     public let colorCode: String
     public var error: Bool
     public var reason: String?
+    public var items: [GroceryItemResponseDTO]
 
-    public init(id: UUID, title: String, colorCode: String, error: Bool, reason: String? = nil) {
+    public init(id: UUID, title: String, colorCode: String, error: Bool, reason: String? = nil, items: [GroceryItemResponseDTO] = []) {
         self.id = id
         self.title = title
         self.colorCode = colorCode
         self.error = error
         self.reason = reason
+        self.items = items
     }
 }
